@@ -9,6 +9,7 @@ import reducers from './reducers';
 import PostIndex from './components/postindex.js';
 import PostNew from './components/post_new.js';
 import Post_Show from './components/post_show.js';
+import regsw from './registerws.js';
 
 const createStoreWithMiddleware = applyMiddleware(promise)(createStore); //promise middleware between action creator and reducer
 
@@ -24,4 +25,5 @@ ReactDOM.render(
     	</div>
     </BrowserRouter>
   </Provider>
-  , document.querySelector('.container'));
+	, document.querySelector('.container'));
+	regsw();
